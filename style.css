@@ -9,3 +9,90 @@ html, body{
     height: 100%;
     width: 100%;
 }
+
+/*
+units -
+    % - relative to the parent size. (Ex- 1% means 1% of the viewport)
+    vw - relative to the viewport width (1vw = 1% of the viewport's width)
+    vh - relative to the viewport height (1vh = 1% of the viewport's height)
+    vmin - relative to the smaller dimension of the viewport (1vmin = 1% of the smaller dimension)
+    vmax - relative to the larger dimension of the viewport (1vmax = 1% of the larger dimension)
+    em - relative to the parent element (1em = 16px of the parent's font size)
+    rem - relative to the root element (1rem = 16px)
+    px - pixels (fixed unit)
+*/
+
+/* 
+In mobile phones, the height of the viewport is greater than the viewport width but in computer the height of the viewport is less than the viewport width.
+vmin - the smaller dimension of the viewport will be used for calculating the value.
+vmax - the larger dimension of the viewport will be used for calculating the value.
+*/
+
+/*
+The value of 1rem = 16px by default because most browsers set the default font size of the root element (<html>) to 16 pixels.
+
+'rem' stands for "root em".
+
+By default, browsers (like Chrome, Firefox, etc.) apply:
+html {
+  font-size: 16px;
+}
+
+SO:
+1rem = 16px
+0.5rem = 8px
+2rem = 32px
+
+
+Can it be changed?
+Yes! You can override the root font size:
+html {
+  font-size: 10px;
+}
+
+
+*/
+
+#parent{
+    height: 600px;
+    /* width: 80%; */
+    width: 80vw;
+    background-color: crimson;
+    margin-bottom: 10px;
+}
+
+#child{
+    height: 50%;
+    width: 50%;
+    font-size: 3vw;
+    color: white;
+    background-color: royalblue;
+}
+
+
+/* Second */
+#parent2{
+    width: 40%;
+    background-color: #dadada;
+    font-size: 30px;
+}
+
+h1{
+    /* 2em means 2 times the font size of its parent element */
+    /*
+     Here, 2em = 2 + 30 = 60px (because h1 is inside div) (px because the font size of div is mentioned in px)
+    */
+    font-size: 2em;
+}
+
+h2{
+    /* 1em means 1 times the font size of its parent element */
+    font-size: 1.5em;
+}
+
+h3{
+    /* font-size: 2em; */
+
+    /* 2rem = 2 * 16px = 32px */
+    font-size: 2rem;
+}
