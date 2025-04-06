@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+/* We should use position absolute as less as possible for creating layouts as it creates trouble for being responsive. */
+
+/*
+Flexbox --> divides our elements in rows and columns
+*/
+
+.parent{
+    height: 100%;
+    width: 100%;
+    background-color: lightblue;
+    display: flex;
+    /*
+    main axis --> x-axis
+    cross axis --> y-axis
+    */
+
+    /* centering the elements along the cross axis */
+    align-items: center;
+
+    /* centering the elements along the main axis */
+    /* justify-content: center; */
+
+    justify-content: space-evenly;
+
+    /* It will prevent from the shrinking of the flex boxes when we shrink the window size */
+    flex-wrap: wrap;
+
+    /* The default flex direction is --> row */
+    /* Changing the flex direction to column */
+    /* flex-direction: column; */
+}
+
+.child1{
+    height: 280px;
+    width: 280px;
+    background-color: crimson;
+    border: 4px solid #fff;
+}
+
+.child2{
+    height: 280px;
+    width: 280px;
+    background-color: crimson;
+    border: 4px solid #fff;
+}
+
+.child3{
+    height: 280px;
+    width: 280px;
+    background-color: crimson;
+    border: 4px solid #fff;
+}
